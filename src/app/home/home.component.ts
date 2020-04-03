@@ -3,6 +3,7 @@ import { HttpService } from "../http.service";
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Chart } from 'chart.js';
 import { Data } from '../data';
+import { Observable,of, from } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -21,13 +22,6 @@ export class HomeComponent implements OnInit {
   chart = [];
 
   constructor(private httpClient: HttpClient) { }
-
-  // res.forEach(y => {
-  //   this.country.push(y.country);
-  //   this.cases.push(y.cases);
-  //   this.deaths.push(y.deaths);
-  //   this.recovered.push(y.recovered);
-  // });
 
   ngOnInit() {
     this.httpClient.get(this.API_URL).subscribe((res: Data[]) => {
