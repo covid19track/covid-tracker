@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from "../http.service";
 
 @Component({
   selector: 'app-list',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  readonly COUNTRIES = {
+    'USA': 'Η.Π.Α (Αμερική)',
+    'Italy': 'Ιταλία',
+    'Spain': 'Ισπανία',
+    'Germany': 'Γερμανία',
+    'France': 'Γαλλία',
+    'Iran': 'Ιράν',
+    'UK': 'Ηνωμένο Βασίλειο',
+    'Turkey': 'Τουρκία',
+    'Switzerland': 'Ελβετία',
+    'Belgium': 'Βέλγιο'
+  };
+
+  countriesData: Object;
+
+  constructor(private _http: HttpService) { }
 
   ngOnInit(): void {
+    this._http.getList().subscribe(data => {
+      this.countriesData = data;
+      console.table(this.countriesData);
+    });
   }
-
 }

@@ -4,3 +4,25 @@
   text-align: center;
   font-size: xx-large;
 }
+
+.country-container {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.item {
+  display: flex;
+  margin: 50px;
+  margin-block-start: 50px;
+}
+
+li {
+  list-style-type: none;
+}
+
+@media all and (max-width: 979px) {
+  .item {
+    padding: 3rem;
+  }
+}

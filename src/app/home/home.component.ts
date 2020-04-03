@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
           datasets: [
             {
               data: this.cases,
-              borderColor: '#3cba9f',
+              borderColor: '#FF0022',
               fill: true
             }
           ]

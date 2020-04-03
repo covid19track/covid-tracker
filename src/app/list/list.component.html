@@ -1,1 +1,25 @@
-<p>list works!</p>
+<div class="container">
+  <p>Total Countries</p>
+</div>
+
+<div class="country-container">
+
+</div>
+
+<ul *ngIf="countriesData">
+  <div class="country-container">
+    <li class="country-block" *ngFor="let country of countriesData; index as i">
+      <div class="item">
+        <mat-card class="card">
+          <mat-card-title>{{ country.country }}</mat-card-title>
+          <mat-card-subtitle>#{{ i + 1 }} </mat-card-subtitle>
+          <img class="country-flag" mat-card-img-small
+            src="https://www.countryflags.io/{{country.countryInfo.iso2}}/shiny/64.png" alt="">
+          <mat-card-content>
+            {{ country.cases }} Cases <br> {{ country.deaths }} Deaths <br> {{ country.recovered}} Recovered
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </li>
+  </div>
+</ul>
