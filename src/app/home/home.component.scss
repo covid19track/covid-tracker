@@ -1,0 +1,12 @@
+$topmargin: 15px;
+
+.container p {
+  margin: 0;
+  margin-top: 10px;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.chart-panel {
+  margin-top: calc($topmargin + 15px);
+}
