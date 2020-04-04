@@ -66,7 +66,7 @@ export class HomeComponent implements OnInit {
               'rgba(255, 66, 70, 0.5)',
                 'rgba(255, 77, 80, 0.5)',
                 'rgba(255, 88, 90, 0.5)',
-                'rgba(255, 150, 100, 0.6)',
+                'rgba(255, 150, 100, 0.2)',
             ],
             borderWidth: 1
             }
