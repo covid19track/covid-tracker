@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ng-covid-7c060"
+  },
+  "targets": {
+    "ng-covid-7c060": {
+      "hosting": {
+        "covid-web": [
+          "ng-covid-7c060"
+        ]
+      }
+    }
+  }
+}
