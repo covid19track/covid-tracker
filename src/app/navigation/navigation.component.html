@@ -2,26 +2,26 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>
-      <mat-icon>keyboard_arrow_down</mat-icon> Select
+      <mat-icon>keyboard_arrow_down</mat-icon> Πλοήγηση
     </mat-toolbar>
     <mat-nav-list>
       <a mat-list-item [routerLink]="['home']">
-        <mat-icon>location_on</mat-icon> - Home
+        <mat-icon>location_on</mat-icon> - Κεντρική σελίδα
       </a>
       <a mat-list-item [routerLink]="['list']">
-        <mat-icon>language</mat-icon> - Countries
+        <mat-icon>language</mat-icon> - Χώρες
       </a>
       <a mat-list-item>
-        <mat-icon>insert_chart</mat-icon> - Ranking
+        <mat-icon>insert_chart</mat-icon> - Βαθμολογία
       </a>
       <a mat-list-item>
-        <mat-icon>timeline</mat-icon> - Timeline
+        <mat-icon>timeline</mat-icon> - Χρονολόγιο
       </a>
       <a mat-list-item>
-        <mat-icon>warning</mat-icon> - Information
+        <mat-icon>warning</mat-icon> - Πληροφορίες
       </a>
       <a mat-list-item>
-        <mat-icon>computer</mat-icon> - Developers
+        <mat-icon>computer</mat-icon> - Προγραμματιστές
       </a>
     </mat-nav-list>
   </mat-sidenav>
