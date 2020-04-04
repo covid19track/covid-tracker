@@ -5,6 +5,8 @@ import { Chart } from 'chart.js';
 import { Data } from '../data';
 import { Observable,of, from } from 'rxjs';
 
+import { englishToGreek } from '../metascript';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -25,11 +27,16 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.httpClient.get(this.API_URL).subscribe((res: Data[]) => {
+
       res.slice(0, 10).forEach(y => {
-        this.country.push(y.country);
-        this.cases.push(y.cases);
-        this.deaths.push(y.deaths);
-        this.recovered.push(y.recovered);
+        if (y.country === 'World') {
+          console.log('World summary data will not be added to the chart.')
+        } else {
+          englishToGreek(this.country, y.country);
+          this.cases.push(y.cases);
+          this.deaths.push(y.deaths);
+          this.recovered.push(y.recovered);
+        }
       });
 
       this.chart.push(new Chart('canvas', {
@@ -39,8 +46,29 @@ export class HomeComponent implements OnInit {
           datasets: [
             {
               data: this.cases,
-              borderColor: '#FF0022',
-              fill: true
+              backgroundColor: [
+                'rgba(255, 150, 100, 0.6)',
+                'rgba(255, 88, 90, 0.5)',
+                'rgba(255, 77, 80, 0.5)',
+                'rgba(255, 66, 70, 0.5)',
+                'rgba(255, 55, 60, 0.5)',
+                'rgba(255, 44, 50, 0.4)',
+                'rgba(255, 33, 40, 0.4)',
+                'rgba(255, 22, 30, 0.3)',
+                'rgba(255, 11, 20, 0.25)',
+            ],
+            borderColor: [
+              'rgba(255, 11, 20, 0.25)',
+              'rgba(255, 22, 30, 0.3)',
+              'rgba(255, 33, 40, 0.4)',
+              'rgba(255, 33, 40, 0.4)',
+              'rgba(255, 55, 60, 0.5)',
+              'rgba(255, 66, 70, 0.5)',
+                'rgba(255, 77, 80, 0.5)',
+                'rgba(255, 88, 90, 0.5)',
+                'rgba(255, 150, 100, 0.6)',
+            ],
+            borderWidth: 1
             }
           ]
         },

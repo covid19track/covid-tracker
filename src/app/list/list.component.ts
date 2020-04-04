@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from "../http.service";
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { Chart } from 'chart.js';
+import { Data } from '../data';
+import { Observable,of, from } from 'rxjs';
+
+import { englishToGreek } from '../metascript';
+import { HttpService } from '../http.service';
+
 
 @Component({
   selector: 'app-list',
@@ -8,18 +15,7 @@ import { HttpService } from "../http.service";
 })
 export class ListComponent implements OnInit {
 
-  readonly COUNTRIES = {
-    'USA': 'Η.Π.Α (Αμερική)',
-    'Italy': 'Ιταλία',
-    'Spain': 'Ισπανία',
-    'Germany': 'Γερμανία',
-    'France': 'Γαλλία',
-    'Iran': 'Ιράν',
-    'UK': 'Ηνωμένο Βασίλειο',
-    'Turkey': 'Τουρκία',
-    'Switzerland': 'Ελβετία',
-    'Belgium': 'Βέλγιο'
-  };
+  readonly API_URL = 'https://corona.lmao.ninja/countries';
 
   countriesData: Object;
 
@@ -29,6 +25,7 @@ export class ListComponent implements OnInit {
     this._http.getList().subscribe(data => {
       this.countriesData = data;
       console.table(this.countriesData);
+      console.table(this.countriesData[0]);
     });
   }
 }
