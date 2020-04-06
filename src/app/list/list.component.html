@@ -1,26 +1,26 @@
 <div class="container">
-  <p>Χώρες</p>
+  <p class="title">Χώρες</p>
 </div>
 
-<div class="country-container">
-
+<div class="page-container">
+  <mat-select-country>
+  </mat-select-country>
+  <ul *ngIf="countries">
+    <div class="country-container">
+      <li class="country-block" *ngFor="let country of countries; index as i">
+        <div class="item">
+          <mat-card class="card">
+            <mat-card-title>{{ country.country }}</mat-card-title>
+            <mat-card-subtitle>#{{ i + 1 }} </mat-card-subtitle>
+            <img class="country-flag" mat-card-img-small
+              src="https://www.countryflags.io/{{ country.countryInfo.iso2 }}/shiny/64.png"
+              alt="Δεν υπάρχει διαθέσιμη εικόνα για προβολή">
+            <mat-card-content>
+              {{ country.cases }} περιστατικά <br> {{ country.deaths }} θάνατοι <br> {{ country.recovered}} ανάρρωσαν
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </li>
+    </div>
+  </ul>
 </div>
-
-<ul *ngIf="countriesData">
-  <div class="country-container">
-    <li class="country-block" *ngFor="let country of countriesData; index as i">
-      <div class="item">
-        <mat-card class="card">
-          <mat-card-title>{{ country.country }}</mat-card-title>
-          <mat-card-subtitle>#{{ i + 1 }} </mat-card-subtitle>
-          <img class="country-flag" mat-card-img-small
-            src="https://www.countryflags.io/{{ country.countryInfo.iso2 }}/shiny/64.png"
-            alt="Flag of {{country.country}}">
-          <mat-card-content>
-            {{ country.cases }} περιστατικά <br> {{ country.deaths }} θάνατοι <br> {{ country.recovered}} ανάρρωσαν
-          </mat-card-content>
-        </mat-card>
-      </div>
-    </li>
-  </div>
-</ul>

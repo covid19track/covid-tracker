@@ -27,13 +27,18 @@ import { HttpClientModule } from '@angular/common/http';
 // import { RatingComponent } from './rating/rating.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import { ProgrammersComponent } from './programmers/programmers.component';
+
+import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     HomeComponent,
-    ListComponent
+    ListComponent,
+    ProgrammersComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +57,8 @@ import { MatTableModule } from '@angular/material/table';
     MatTableModule,
     MatInputModule,
     MatFormFieldModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatSelectCountryModule
     // ChartsModule
   ],
   providers: [],

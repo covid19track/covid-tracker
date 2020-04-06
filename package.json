@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-material-extensions/select-country": "^1.0.0",
     "@angular/animations": "~9.1.0",
     "@angular/cdk": "^9.2.0",
     "@angular/common": "~9.1.0",
@@ -24,6 +25,7 @@
     "@angular/router": "~9.1.0",
     "chart.js": "^2.9.3",
     "rxjs": "^6.5.5",
+    "svg-country-flags": "^1.2.6",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

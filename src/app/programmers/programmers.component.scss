@@ -1,0 +1,42 @@
+.container .title {
+  margin: 0;
+  margin-top: 15px;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.page-container {
+  text-align: center;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  /* Safari and Chrome */
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  /* W3C */
+  display: box;
+  box-pack: center;
+  box-align: center;
+}
+
+.dev-card {
+  width: 50%;
+  // margin-left: 50px;
+  margin-top: 50px;
+  max-width: 400px;
+}
+
+.dev-header-image {
+  background-image: url('https://avatars2.githubusercontent.com/u/40323691?s=460&u=1f2ee290eb85881ae1adc345254f272ae1b443ce&v=4');
+  background-size: cover;
+}
+
+.dev-card p {
+  text-align: center;
+}
+
+.email-link:link {
+  color: darkcyan;
+  text-decoration-color: indigo;
+}
