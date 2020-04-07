@@ -3,7 +3,7 @@ import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { debounceTime, tap, switchMap, finalize } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
-import { Country } from './country';
+import { CountryModel } from './countrymodel';
 import { HttpService } from './http.service';
 
 @Component({
@@ -21,6 +21,6 @@ export class AppComponent {
   constructor(private http: HttpClient) { }
 
   getCountries() {
-    this.countries = this.http.get<Country[]>(this.ROOT_URL + '/countries');
+    this.countries = this.http.get<CountryModel[]>(this.ROOT_URL + '/countries');
   }
 }

@@ -16,4 +16,8 @@ export class HttpService {
   public getList() {
     return this.http.get('https://corona.lmao.ninja/countries');
   }
+
+  public searchCountry(country: string) {
+    return this.http.get('https://corona.lmao.ninja/country/' + country)
+  }
 }

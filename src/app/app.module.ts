@@ -30,6 +30,7 @@ import { MatTableModule } from '@angular/material/table';
 import { ProgrammersComponent } from './programmers/programmers.component';
 
 import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { MatSelectCountryModule } from '@angular-material-extensions/select-coun
     NavigationComponent,
     HomeComponent,
     ListComponent,
-    ProgrammersComponent
+    ProgrammersComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

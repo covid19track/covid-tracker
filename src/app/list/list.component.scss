@@ -1,8 +1,20 @@
+.container {
+  text-align: center;
+}
+
 .container .title {
   margin: 0;
   margin-top: 15px;
   text-align: center;
   font-size: xx-large;
+}
+
+.description {
+  margin-top: 15px;
+}
+
+.country-selector {
+  margin-top: 25px;
 }
 
 .page-container {

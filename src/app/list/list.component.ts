@@ -5,7 +5,7 @@ import { Data } from '../data';
 import { Observable,of, from } from 'rxjs';
 import { lexor, englishToGreek, toObject, singleObject } from '../metascript';
 import { HttpService } from '../http.service';
-import { Country } from '../country';
+import { CountryModel } from '../countrymodel';
 
 @Component({
   selector: 'app-list',
@@ -17,12 +17,12 @@ export class ListComponent implements OnInit {
   readonly API_URL = 'https://corona.lmao.ninja/countries';
 
 
-  countries = [];
-  country = [];
-  cases = [];
-  deaths = [];
-  recovered = [];
-  countryInfo = [];
+  countries     = [];
+  country       = [];
+  cases         = [];
+  deaths        = [];
+  recovered     = [];
+  countryInfo   = [];
 
   constructor(private httpClient: HttpClient) { }
 
