@@ -18,6 +18,7 @@ export class NavigationComponent {
 
   events: string[] = [];
   opened: boolean;
+
   constructor(private breakpointObserver: BreakpointObserver) {}
 
 }
