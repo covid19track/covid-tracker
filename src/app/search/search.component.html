@@ -8,3 +8,27 @@
     </mat-select-country>
   </div>
 </div>
+
+<div class="page-container">
+  <ul *ngIf="country">
+        <div class="item">
+          <mat-card class="card">
+            <mat-card-title>{{ country.country }}</mat-card-title>
+            <img class="country-flag" mat-card-img-medium
+              src="https://www.countryflags.io/{{ country.countryInfo.iso2 }}/shiny/64.png"
+              alt="Δεν υπάρχει διαθέσιμη εικόνα για προβολή">
+            <mat-card-content>
+              <h3>
+                {{ country.cases }} περιστατικά
+              </h3>
+              <h3>
+                {{ country.recovered}} ανάρρωσαν
+              </h3>
+              <h3>
+                {{ country.recovered}} ανάρρωσαν
+              </h3>
+            </mat-card-content>
+          </mat-card>
+        </div>
+  </ul>
+</div>

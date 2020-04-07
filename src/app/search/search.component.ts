@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { lexor } from '../metascript';
 import { Country } from '../country';
+import { CountryModel } from '../countrymodel';
 
 @Component({
   selector: 'app-search',
@@ -11,13 +12,7 @@ import { Country } from '../country';
 export class SearchComponent implements OnInit {
 
   url: string;
-
-  countries     = [];
-  country       = [];
-  cases         = [];
-  deaths        = [];
-  recovered     = [];
-  countryInfo   = [];
+  country: CountryModel;
 
   constructor(private _http: HttpService) {}
 
@@ -27,22 +22,14 @@ export class SearchComponent implements OnInit {
   onCountrySelected($event: Country) {
     console.log($event);
 
-    this.url = 'https://corona.lmao.ninja/country/' + $event.name;
+    this.url = 'https://corona.lmao.ninja/countries/' + $event.name;
 
-    this._http.searchCountry($event.name).subscribe((data: Array<any>) => {
-      data = data.filter(c => c.country !== 'World');
+    this._http.searchCountry($event.name).subscribe((data: CountryModel) => {
 
-      data.forEach(y => {
-        this.countries.push({
-          country: lexor.get(y.country),
-          cases: y.cases,
-          deaths: y.deaths,
-          recovered: y.recovered,
-          countryInfo: y.countryInfo
-        });
-      });;
+      this.country = data;
+      this.country.country = lexor.get(data.country);
       console.table(data);
-      console.table(this.countries);
+      console.table(this.country);
     });
   }
 

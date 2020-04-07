@@ -18,6 +18,6 @@ export class HttpService {
   }
 
   public searchCountry(country: string) {
-    return this.http.get('https://corona.lmao.ninja/country/' + country)
+    return this.http.get('https://corona.lmao.ninja/countries/' + country)
   }
 }
