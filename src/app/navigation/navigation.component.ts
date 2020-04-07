@@ -16,6 +16,8 @@ export class NavigationComponent {
       shareReplay()
     );
 
+  events: string[] = [];
+  opened: boolean;
   constructor(private breakpointObserver: BreakpointObserver) {}
 
 }

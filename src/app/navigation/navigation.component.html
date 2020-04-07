@@ -4,7 +4,7 @@
     <mat-toolbar>
       <mat-icon>keyboard_arrow_down</mat-icon> Πλοήγηση
     </mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list (click)="drawer.toggle()">
       <a mat-list-item [routerLink]="['home']">
         <mat-icon>location_on</mat-icon> - Κεντρική σελίδα
       </a>
