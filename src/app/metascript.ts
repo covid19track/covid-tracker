@@ -64,7 +64,7 @@ lexor.set('Hong Kong', 'Χονγκ Κόνγκ');
 lexor.set('Lithuania', 'Λιθουανία');
 lexor.set('Armenia', 'Αρμενία');
 lexor.set('Moldova', 'Μολδοβία');
-lexor.set('Diamond Princess', '*Πλοίο D.P.');
+lexor.set('Diamond Princess', 'D. Princess');
 lexor.set('Bahrain', 'Μπαχρέιν');
 lexor.set('Hungary', 'Ουγκαρία');
 lexor.set('Bosnia', 'Βοζνία');
@@ -85,6 +85,7 @@ lexor.set('Costa Rica', 'Κόστα Ρίκα');
 lexor.set('Cyprus', 'Κύπρος');
 lexor.set('Uruguay', 'Ουρουγουάη');
 lexor.set('Taiwan', 'Ταϊβάν');
+lexor.set('Albania', 'Αλβανία');
 
 function englishToGreek(pushableObject, countryName) {
   pushableObject.push(lexor.get(countryName));
