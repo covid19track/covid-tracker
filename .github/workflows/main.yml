@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
-      uses: actions/checkout@gr
+      uses: actions/checkout@gmaster
     - name: Build Hugo
       uses: lowply/build-hugo@v0.68.3
     - name: Deploy to Firebase
