@@ -14,7 +14,7 @@ import { CountryModel } from '../countrymodel';
 })
 export class ListComponent implements OnInit {
 
-  readonly API_URL = 'https://corona.lmao.ninja/countries';
+  readonly API_URL = 'https://corona.lmao.ninja/countries?sort=cases';
 
 
   countries     = [];
@@ -31,6 +31,7 @@ export class ListComponent implements OnInit {
 
     this.httpClient.get(this.API_URL).subscribe((data: Array<any>) => {
       data = data.filter(c => c.country !== 'World');
+	  data = data.filter(c => c.country !== 'Diamond Princess');
 
       data.slice(0, 100).forEach(y => {
         this.countries.push({

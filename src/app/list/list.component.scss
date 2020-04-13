@@ -18,7 +18,7 @@
 }
 
 .page-container {
-  align-items: center;
+	display: flex;
 }
 
 .country-container {
@@ -29,7 +29,7 @@
 
 .item {
   display: flex;
-  margin: 50px;
+  padding: 9.5px;
   margin-block-start: 50px;
 }
 
@@ -44,8 +44,14 @@ li {
 }
 
 
-// @media all and (max-width: 979px) {
-//   .item {
-//     padding: 25rem;
-//   }
-// }
+@media all and (max-width: 979px) {
+   .page-container {
+	  display: flex;
+      align-items: center;
+	  justify-content: center;
+   }
+   
+   .country-container {
+     padding: 9.5px;
+   }
+}

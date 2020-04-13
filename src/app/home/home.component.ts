@@ -14,7 +14,7 @@ import { englishToGreek } from '../metascript';
 })
 export class HomeComponent implements OnInit {
 
-  readonly API_URL = 'https://corona.lmao.ninja/countries';
+  readonly API_URL = 'https://corona.lmao.ninja/countries?sort=cases';
 
   country = [];
   cases = [];

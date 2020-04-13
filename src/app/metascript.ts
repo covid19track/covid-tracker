@@ -1,6 +1,7 @@
 const lexor = new Map();
 
-lexor.set('World', 'Παγκοσμίος'); // in extreme cases
+lexor.set('World', 'Παγκοσμίος');
+lexor.set('China', 'Κίνα'); // in extreme cases
 lexor.set('USA', 'Η.Π.Α');
 lexor.set('Spain', 'Ισπανία');
 lexor.set('Italy', 'Ιταλία');
@@ -29,7 +30,7 @@ lexor.set('Poland', 'Πολωνία');
 lexor.set('Romania', 'Ρουμανία');
 lexor.set('Malaysia', 'Μαλαισία');
 lexor.set('Ecuador', 'Ισημερινός');
-lexor.set('Phillipines', 'Φιλιππίνες');
+lexor.set('Philippines', 'Φιλιππίνες');
 lexor.set('India', 'Ινδία');
 lexor.set('Japan', 'Ιαπωνία');
 lexor.set('Pakistan', 'Πακιστάν');
@@ -85,7 +86,24 @@ lexor.set('Costa Rica', 'Κόστα Ρίκα');
 lexor.set('Cyprus', 'Κύπρος');
 lexor.set('Uruguay', 'Ουρουγουάη');
 lexor.set('Taiwan', 'Ταϊβάν');
+lexor.set('Ireland', 'Ιρλανδία');
+lexor.set('Uzbekistan', 'Ουζμπεκιστάν');
 lexor.set('Albania', 'Αλβανία');
+lexor.set('Cuba', 'Κούβα');
+lexor.set('Afghanistan', 'Αφγανιστάν');
+lexor.set('Oman', 'Ομάν');
+lexor.set('Bangladesh', 'Μπανγκλαντές');
+lexor.set('Côte d\'Ivoire', 'Αφγανιστάν');
+lexor.set('Burkina Faso', 'Μπουρκίνα Φάσο');
+lexor.set('Niger', 'Νίγηρας');
+lexor.set('Ghana', 'Γκάνα');
+lexor.set('Channel Islands', 'Ν. Μάγχης');
+lexor.set('Honduras', 'Ονδούρα');
+lexor.set('Taiwan', 'Ταϊβάν');
+lexor.set('Réunion', 'Ρεουνιόν');
+lexor.set('Jordan', 'Ιορδανία');
+lexor.set('Malta', 'Μάλτα');
+lexor.set('San Marino', 'Άγ. Μαρίνος');
 
 function englishToGreek(pushableObject, countryName) {
   pushableObject.push(lexor.get(countryName));
