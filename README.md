@@ -1,4 +1,4 @@
-# Covid on Angular
+# Covid on Angular ![Build and Deploy](https://github.com/covid19track/covid-v3/workflows/Build%20and%20Deploy/badge.svg)
 This project is maintained / developed by Edward Pasenidis (@pasenidis) 
 
 # Angular Notes
