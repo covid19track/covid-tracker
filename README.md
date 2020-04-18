@@ -1,4 +1,4 @@
-# Covid Tracker ![Build and Deploy](https://github.com/covid19track/covid-v3/workflows/Build%20and%20Deploy/badge.svg)
+# Covid Tracker ![Deploy to firebase](https://github.com/covid19track/covid-tracker/workflows/Deploy%20to%20firebase/badge.svg)
 This project is maintained / developed by Edward Pasenidis (@pasenidis) 
 
 # Angular Notes
