@@ -22,9 +22,9 @@ export class SearchComponent implements OnInit {
   onCountrySelected($event: Country) {
     console.log($event);
 
-    this.url = `https://corona.lmao.ninja/v2/countries/${event.alpha2Code}`;
+    this.url = `https://corona.lmao.ninja/v2/countries/${$event.alpha2Code}`;
 
-    this._http.searchCountry($event.alpha2code).subscribe((data: CountryModel) => {
+    this._http.searchCountry(this.url).subscribe((data: CountryModel) => {
 
       this.country = data;
       this.country.country = lexor.get(data.country);

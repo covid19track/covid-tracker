@@ -17,7 +17,7 @@ export class HttpService {
     return this.http.get('https://corona.lmao.ninja/v2/countries');
   }
 
-  public searchCountry(country: string) {
-    return this.http.get('https://corona.lmao.ninja/v2/countries/' + country)
+  public searchCountry(url: string) {
+    return this.http.get(url);
   }
 }
