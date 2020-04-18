@@ -1,6 +1,7 @@
 {
   "hosting": [
     {
+      "target": "covid-web"
       "public": "dist",
       "ignore": [
         "firebase.json",
