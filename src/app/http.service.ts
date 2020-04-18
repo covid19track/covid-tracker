@@ -10,14 +10,14 @@ export class HttpService {
 
 
   public getAll() {
-    return this.http.get('https://corona.lmao.ninja/all');
+    return this.http.get('https://corona.lmao.ninja/v2/all');
   }
 
   public getList() {
-    return this.http.get('https://corona.lmao.ninja/countries');
+    return this.http.get('https://corona.lmao.ninja/v2/countries');
   }
 
   public searchCountry(country: string) {
-    return this.http.get('https://corona.lmao.ninja/countries/' + country)
+    return this.http.get('https://corona.lmao.ninja/v2/countries/' + country)
   }
 }

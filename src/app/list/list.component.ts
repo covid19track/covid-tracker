@@ -14,7 +14,7 @@ import { CountryModel } from '../countrymodel';
 })
 export class ListComponent implements OnInit {
 
-  readonly API_URL = 'https://corona.lmao.ninja/countries?sort=cases';
+  readonly API_URL = 'https://corona.lmao.ninja/v2/countries?sort=cases';
 
 
   countries     = [];
