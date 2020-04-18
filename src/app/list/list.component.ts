@@ -31,7 +31,7 @@ export class ListComponent implements OnInit {
 
     this.httpClient.get(this.API_URL).subscribe((data: Array<any>) => {
       data = data.filter(c => c.country !== 'World');
-	  data = data.filter(c => c.country !== 'Diamond Princess');
+	    data = data.filter(c => c.country !== 'Diamond Princess');
 
       data.slice(0, 100).forEach(y => {
         this.countries.push({

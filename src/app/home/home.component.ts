@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from "../http.service";
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Chart } from 'chart.js';
 import { Data } from '../data';
 import { Observable,of, from } from 'rxjs';
@@ -16,12 +15,12 @@ export class HomeComponent implements OnInit {
 
   readonly API_URL = 'https://corona.lmao.ninja/v2/countries?sort=cases';
 
-  country = [];
-  cases = [];
-  deaths = [];
+  country   = [];
+  cases     = [];
+  deaths    = [];
   recovered = [];
 
-  chart = [];
+  chart     = [];
 
   constructor(private httpClient: HttpClient) { }
 
@@ -47,15 +46,15 @@ export class HomeComponent implements OnInit {
             {
               data: this.cases,
               backgroundColor: [
-                'rgba(255, 150, 100, 0.6)',
-                'rgba(255, 88, 90, 0.5)',
-                'rgba(255, 77, 80, 0.5)',
-                'rgba(255, 66, 70, 0.5)',
-                'rgba(255, 55, 60, 0.5)',
-                'rgba(255, 44, 50, 0.4)',
-                'rgba(255, 33, 40, 0.4)',
-                'rgba(255, 22, 30, 0.3)',
-                'rgba(255, 11, 20, 0.25)',
+              'rgba(255, 150, 100, 0.6)',
+              'rgba(255, 88, 90, 0.5)',
+              'rgba(255, 77, 80, 0.5)',
+              'rgba(255, 66, 70, 0.5)',
+              'rgba(255, 55, 60, 0.5)',
+              'rgba(255, 44, 50, 0.4)',
+              'rgba(255, 33, 40, 0.4)',
+              'rgba(255, 22, 30, 0.3)',
+              'rgba(255, 11, 20, 0.25)',
             ],
             borderColor: [
               'rgba(255, 11, 20, 0.25)',
@@ -64,9 +63,9 @@ export class HomeComponent implements OnInit {
               'rgba(255, 33, 40, 0.4)',
               'rgba(255, 55, 60, 0.5)',
               'rgba(255, 66, 70, 0.5)',
-                'rgba(255, 77, 80, 0.5)',
-                'rgba(255, 88, 90, 0.5)',
-                'rgba(255, 150, 100, 0.2)',
+              'rgba(255, 77, 80, 0.5)',
+              'rgba(255, 88, 90, 0.5)',
+              'rgba(255, 150, 100, 0.2)',
             ],
             borderWidth: 1
             }
