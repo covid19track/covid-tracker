@@ -3,7 +3,7 @@ This project is maintained / developed by Edward Pasenidis (@pasenidis)
 
 # Angular Notes
 
-## Development server
+## Local development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
