@@ -1,4 +1,4 @@
-# CovidWeb
+# Covid on Angular
 This project is maintained / developed by Edward Pasenidis (@pasenidis) 
 
 # Angular Notes
