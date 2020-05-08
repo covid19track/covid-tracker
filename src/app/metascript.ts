@@ -104,6 +104,18 @@ lexor.set('Réunion', 'Ρεουνιόν');
 lexor.set('Jordan', 'Ιορδανία');
 lexor.set('Malta', 'Μάλτα');
 lexor.set('San Marino', 'Άγ. Μαρίνος');
+lexor.set('Nigeria', 'Νιγηρία');
+lexor.set('Bolivia', 'Βολιβία');
+lexor.set('Guinea', 'Γουινέα');
+lexor.set('Senegal', 'Σενεγάλ');
+lexor.set('Djibouti', 'Τζιμπουτί');
+lexor.set('Sudan', 'Σουδάν');
+lexor.set('Somalia', 'Σομαλία');
+lexor.set('Kyrgyzstan', 'Κιργιζία');
+lexor.set('Democratic Republic of the Congo', 'Κονγκό');
+lexor.set('Mayotte', 'Μαγιότ');
+lexor.set('Guatemala', 'Γουατεμάλα');
+lexor.set('Sri Lanka', 'Σρι Λάνκα');
 
 function englishToGreek(pushableObject, countryName) {
   pushableObject.push(lexor.get(countryName));
