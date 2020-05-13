@@ -116,6 +116,8 @@ lexor.set('Democratic Republic of the Congo', 'Κονγκό');
 lexor.set('Mayotte', 'Μαγιότ');
 lexor.set('Guatemala', 'Γουατεμάλα');
 lexor.set('Sri Lanka', 'Σρι Λάνκα');
+lexor.set('El Salvador', 'Ελ Σαλβαδόρ');
+lexor.set('Maldives', 'Μαλδίβες');
 
 function englishToGreek(pushableObject, countryName) {
   pushableObject.push(lexor.get(countryName));
