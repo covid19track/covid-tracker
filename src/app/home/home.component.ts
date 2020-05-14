@@ -25,6 +25,18 @@ export class HomeComponent implements OnInit {
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
+    this.titleService.setTitle('covidtrack.tk: Παρακολουθήστε την εξέλιξη της πανδημίας');
+    this.meta.addTag({
+      name: 'angular.ganatan',
+      content: 'danny ganatan'
+    });
+    this.meta.updateTag(
+      {
+        name: 'description',
+        content: 'Cette application a été développée avec Angular version 9.1.4 et bootstrap 4.4.1' +
+          ' Elle applique le Routing, le Lazy loading, le Server side rendering et les Progressive Web App (PWA)'
+      });
+
     this.httpClient.get(this.API_URL).subscribe((res: Data[]) => {
 
       res.slice(0, 10).forEach(y => {
