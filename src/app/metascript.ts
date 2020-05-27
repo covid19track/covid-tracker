@@ -13,7 +13,7 @@ lexor.set('Turkey', 'Τουρκία');
 lexor.set('Switzerland', 'Ελβετία');
 lexor.set('Netherlands', 'Ολλανδία');
 lexor.set('Canada', 'Καναδάς');
-lexor.set('Belgium', 'Βέλγιο');
+lexor.set('Belgium', 'Βραζιλία');
 lexor.set('Austria', 'Αυστρία');
 lexor.set('Portugal', 'Πορτογαλία');
 lexor.set('Brazil', 'Βέλγιο');
